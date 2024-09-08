@@ -1,0 +1,1109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.6 on win32)" generated="2024-09-09T02:09:46.465842" rpa="false" schemaversion="5">
+<suite id="s1" name="Suite Test-Dashboard" source="D:\One Map\Automation_API\Suite Test\suite_test-dashboard.robot">
+<test id="s1-t1" name="Open Browser" line="9">
+<kw name="Open Browser - Incognito" owner="dashboard_maps">
+<kw name="Open browser in Incognito Mode" owner="dashboard_maps">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-09-09T02:09:47.533962" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0530CD08&gt;</msg>
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-09-09T02:09:47.532962" elapsed="0.001000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-09-09T02:09:47.533962" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-09-09T02:09:47.534962" level="INFO">${prefs} = {'profile.default_content_setting_values.geolocation': '1', 'profile.default_content_setting_values.notifications': '2', 'profile.default_content_setting_values.media_stream_camera': '2', 'profile.def...</msg>
+<var>${prefs}</var>
+<arg>profile.default_content_setting_values.geolocation=1</arg>
+<arg>profile.default_content_setting_values.notifications=2</arg>
+<arg>profile.default_content_setting_values.media_stream_camera=2</arg>
+<arg>profile.default_content_setting_values.media_stream_mic=2</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-09-09T02:09:47.533962" elapsed="0.001000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_experimental_option</arg>
+<arg>prefs</arg>
+<arg>${prefs}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-09-09T02:09:47.534962" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:09:47.535963" level="INFO">Opening browser 'Chrome' to base url 'https://www.onemap.gov.sg'.</msg>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-09T02:09:47.534962" elapsed="2.799568"/>
+</kw>
+<arg>${base_url}</arg>
+<status status="PASS" start="2024-09-09T02:09:47.531962" elapsed="2.802568"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.334530" elapsed="0.162635"/>
+</kw>
+<tag>Open Browser - Incognito</tag>
+<status status="PASS" start="2024-09-09T02:09:47.531962" elapsed="2.965203"/>
+</kw>
+<tag>Open Browser (Chrome)[Incognito]</tag>
+<status status="PASS" start="2024-09-09T02:09:47.530962" elapsed="2.966203"/>
+</test>
+<test id="s1-t2" name="TC 1 - Maps - Dashboard - Check necessary element" line="13">
+<kw name="Test Generate random angka" owner="dashboard_maps">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-09-09T02:09:50.500695" level="INFO">${random_number1} = 9</msg>
+<var>${random_number1}</var>
+<arg>random.randint(1, 10)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.500695" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-09-09T02:09:50.500695" level="INFO">${random_number2} = 82</msg>
+<var>${random_number2}</var>
+<arg>random.randint(10, 100)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.500695" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-09-09T02:09:50.501697" level="INFO">${random_number3} = 758</msg>
+<var>${random_number3}</var>
+<arg>random.randint(100, 1000)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.501697" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-09-09T02:09:50.502697" level="INFO">${random_number4} = 8759</msg>
+<var>${random_number4}</var>
+<arg>random.randint(1000, 10000)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.501697" elapsed="0.001000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-09-09T02:09:50.502697" level="INFO">${random_number1} = 9</msg>
+<arg>${random_number1}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.502697" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-09-09T02:09:50.502697" level="INFO">${random_number2} = 82</msg>
+<arg>${random_number2}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.502697" elapsed="0.001000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-09-09T02:09:50.503697" level="INFO">${random_number3} = 758</msg>
+<arg>${random_number3}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.503697" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-09-09T02:09:50.503697" level="INFO">${random_number4} = 8759</msg>
+<arg>${random_number4}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.503697" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${random_number1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.504697" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${random_number2}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.504697" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${random_number3}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.505698" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${random_number4}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.505698" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-09T02:09:50.506698" level="INFO">9</msg>
+<arg>${random_number1}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.506698" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-09T02:09:50.506698" level="INFO">82</msg>
+<arg>${random_number2}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.506698" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-09T02:09:50.506698" level="INFO">758</msg>
+<arg>${random_number3}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.506698" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-09T02:09:50.507699" level="INFO">8759</msg>
+<arg>${random_number4}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.507699" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-09-09T02:09:50.499695" elapsed="0.008004"/>
+</kw>
+<kw name="Test Get Formatted Dates" owner="dashboard_maps">
+<kw name="Formatted Past Date" owner="logic">
+<msg time="2024-09-09T02:09:50.508700" level="INFO">${past_date} = 06/11/2024 02:09:50.508700</msg>
+<var>${past_date}</var>
+<status status="PASS" start="2024-09-09T02:09:50.508700" elapsed="0.000000"/>
+</kw>
+<kw name="Formatted Current Date" owner="logic">
+<msg time="2024-09-09T02:09:50.509854" level="INFO">${formatted_current_date} = 09/09/2024 02:09 AM</msg>
+<msg time="2024-09-09T02:09:50.509854" level="INFO">${formatted_current_date_2} = 09/09/2024 02:09:50.509854 AM</msg>
+<msg time="2024-09-09T02:09:50.509854" level="INFO">${formatted_current_date_3} = 09/09/2024 02:09:50.509854</msg>
+<var>${formatted_current_date}</var>
+<var>${formatted_current_date_2}</var>
+<var>${formatted_current_date_3}</var>
+<status status="PASS" start="2024-09-09T02:09:50.508700" elapsed="0.001154"/>
+</kw>
+<kw name="Formatted Future Date" owner="logic">
+<msg time="2024-09-09T02:09:50.510854" level="INFO">${future_date} = 12/08/2024 02:09 AM</msg>
+<var>${future_date}</var>
+<status status="PASS" start="2024-09-09T02:09:50.509854" elapsed="0.001000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Generated Formatted Time Past: ${past_date}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.510854" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Generated Formatted Time Current A: ${formatted_current_date}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.511855" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Generated Formatted Time Current B: ${formatted_current_date_2}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.511855" elapsed="0.001002"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Generated Formatted Time Current C: ${formatted_current_date_3}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.512857" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Generated Formatted Time Future: ${future_date}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.512857" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-09T02:09:50.514360" level="INFO">Generated Formatted Time Past: 06/11/2024 02:09:50.508700</msg>
+<arg>Generated Formatted Time Past: ${past_date}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.512857" elapsed="0.001503"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-09T02:09:50.514360" level="INFO">Generated Formatted Time Current A: 09/09/2024 02:09 AM</msg>
+<arg>Generated Formatted Time Current A: ${formatted_current_date}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.514360" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-09T02:09:50.514360" level="INFO">Generated Formatted Time Current B: 09/09/2024 02:09:50.509854 AM</msg>
+<arg>Generated Formatted Time Current B: ${formatted_current_date_2}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.514360" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-09T02:09:50.515375" level="INFO">Generated Formatted Time Current C: 09/09/2024 02:09:50.509854</msg>
+<arg>Generated Formatted Time Current C: ${formatted_current_date_3}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.514360" elapsed="0.001015"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-09T02:09:50.515375" level="INFO">Generated Formatted Time Future: 12/08/2024 02:09 AM</msg>
+<arg>Generated Formatted Time Future: ${future_date}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.515375" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-09-09T02:09:50.515375" level="INFO">${past_date} = 06/11/2024 02:09:50.508700</msg>
+<arg>${past_date}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.515375" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-09-09T02:09:50.516375" level="INFO">${formatted_current_date} = 09/09/2024 02:09 AM</msg>
+<arg>${formatted_current_date}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.515375" elapsed="0.001000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-09-09T02:09:50.516375" level="INFO">${formatted_current_date_2} = 09/09/2024 02:09:50.509854 AM</msg>
+<arg>${formatted_current_date_2}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.516375" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-09-09T02:09:50.516375" level="INFO">${formatted_current_date_3} = 09/09/2024 02:09:50.509854</msg>
+<arg>${formatted_current_date_3}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.516375" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-09-09T02:09:50.517375" level="INFO">${future_date} = 12/08/2024 02:09 AM</msg>
+<arg>${future_date}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.517375" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-09-09T02:09:50.507699" elapsed="0.009676"/>
+</kw>
+<kw name="Check necessary element" owner="dashboard_maps">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${field input-search}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.518376" elapsed="0.421057"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button search}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.940435" elapsed="0.018116"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button route}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.959563" elapsed="0.015624"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button expand menu}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.975187" elapsed="0.017272"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:09:50.992459" level="INFO">Clicking element 'xpath=//div[@class="icon-expand-menu-wrapper"]/div[@id="icon-expand-menu"]'.</msg>
+<arg>${button expand menu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:09:50.992459" elapsed="0.042437"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button expand menu-Drone Query}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.034896" elapsed="0.025476"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button expand menu-Land Betterment}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.061373" elapsed="0.015511"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button expand menu-Land Query}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.076884" elapsed="0.042831"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button expand menu-More Services}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.120966" elapsed="0.028555"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button expand menu-Property}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.149521" elapsed="0.019498"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button expand menu-Select Map Styles}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.169019" elapsed="0.019462"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button expand menu-Shadow Analysis}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.188481" elapsed="0.022043"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button expand menu-Show Nearby}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.211526" elapsed="0.018955"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button expand menu-Window View}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.230481" elapsed="0.022031"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button expand menu-About}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.252512" elapsed="0.019030"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:09:51.272542" level="INFO">Clicking element 'xpath=//div[@class="icon-expand-menu-wrapper"]/div[@id="icon-expand-menu"]'.</msg>
+<arg>${button expand menu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.271542" elapsed="0.034689"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${button expand menu-Drone Query}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.307231" elapsed="0.459575"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${button expand menu-Land Betterment}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.766806" elapsed="0.014546"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${button expand menu-Land Query}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.782354" elapsed="0.014528"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${button expand menu-More Services}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.796882" elapsed="0.012834"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${button expand menu-Property}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.811061" elapsed="0.012759"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${button expand menu-Select Map Styles}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.823820" elapsed="0.011140"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${button expand menu-Shadow Analysis}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.834960" elapsed="0.014036"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${button expand menu-Show Nearby}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.848996" elapsed="0.014821"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${button expand menu-Window View}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.863817" elapsed="0.013180"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${button expand menu-About}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.876997" elapsed="0.012866"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:09:51.890864" level="INFO">Typing text '9' into text field 'xpath=//div[@id="search-input-wrapper"]/input[@id="search_property"]'.</msg>
+<arg>${field input-search}</arg>
+<arg>${random_number1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.889863" elapsed="0.077924"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button cancel search}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.967787" elapsed="0.018803"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:09:51.986590" level="INFO">Clicking element 'xpath=//div[@id="cancel-icon"]'.</msg>
+<arg>${button cancel search}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:09:51.986590" elapsed="0.035056"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${button cancel search}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.022646" elapsed="0.012542"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button comunity}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.035188" elapsed="0.018611"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button SchoolQueryInfo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.053799" elapsed="0.016467"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:09:52.070266" level="INFO">Clicking element 'xpath=//div[@id="SchoolQueryInfo"]'.</msg>
+<arg>${button SchoolQueryInfo}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.070266" elapsed="0.059110"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button SchoolQueryInfo-kindergarten}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.129376" elapsed="0.025586"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button SchoolQueryInfo-priSchool}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.155963" elapsed="0.015366"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button SchoolQueryInfo-secSchool}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.172331" elapsed="0.016514"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button SchoolQueryInfo-postSecSchool}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.188845" elapsed="0.018605"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button close school query}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.207450" elapsed="0.019527"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:09:52.226977" level="INFO">Clicking element 'xpath=//div[@class="schoolQueryTitleBlock"]/img[@class="sqOptionBack"]'.</msg>
+<arg>${button close school query}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.226977" elapsed="0.038697"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${button SchoolQueryInfo-kindergarten}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.266675" elapsed="0.013032"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${button SchoolQueryInfo-priSchool}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.279707" elapsed="0.013269"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${button SchoolQueryInfo-secSchool}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.292976" elapsed="0.011518"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${button SchoolQueryInfo-postSecSchool}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.305494" elapsed="0.013514"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${button close school query}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.320009" elapsed="0.014000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button Medical}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.334009" elapsed="0.015356"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button HawkerCentres}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.349365" elapsed="0.016423"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button btn2D3D}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.365788" elapsed="0.015814"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button drawTools}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.382603" elapsed="0.016012"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:09:52.398615" level="INFO">Clicking element 'xpath=//div[@id="drawTools"]'.</msg>
+<arg>${button drawTools}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.398615" elapsed="0.040017"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${button drawTools}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.439140" elapsed="0.074961"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button drawTools-drawLine}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.514101" elapsed="0.018520"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button drawTools-drawPolygon}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.532621" elapsed="0.016762"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button drawTools-deleteDraw}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.550851" elapsed="0.015629"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button drawTools-closeDrawTray}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.566480" elapsed="0.018049"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:09:52.584529" level="INFO">Clicking element 'xpath=//div[@id="drawToolsTray"]/div[@class="closeDrawTray"]'.</msg>
+<arg>${button drawTools-closeDrawTray}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.584529" elapsed="0.030717"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button shareview}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.615246" elapsed="0.017456"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button zoom-in}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.633704" elapsed="0.016025"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button zoom-out}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.649729" elapsed="0.017169"/>
+</kw>
+<tag>Check all button on One Map</tag>
+<doc>Check all button visible</doc>
+<status status="PASS" start="2024-09-09T02:09:50.518376" elapsed="2.148522"/>
+</kw>
+<doc>Perform Check necessary element on onemaps dashboard</doc>
+<tag>Perform Check necessary element</tag>
+<status status="PASS" start="2024-09-09T02:09:50.498670" elapsed="2.168228"/>
+</test>
+<test id="s1-t3" name="TC 2 - Maps - Dashboard - Search on map" line="22">
+<kw name="Test Generate random angka" owner="dashboard_maps">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-09-09T02:09:52.669421" level="INFO">${random_number1} = 8</msg>
+<var>${random_number1}</var>
+<arg>random.randint(1, 10)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.669421" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-09-09T02:09:52.669421" level="INFO">${random_number2} = 23</msg>
+<var>${random_number2}</var>
+<arg>random.randint(10, 100)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.669421" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-09-09T02:09:52.670424" level="INFO">${random_number3} = 437</msg>
+<var>${random_number3}</var>
+<arg>random.randint(100, 1000)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.670424" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-09-09T02:09:52.670424" level="INFO">${random_number4} = 4896</msg>
+<var>${random_number4}</var>
+<arg>random.randint(1000, 10000)</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.670424" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-09-09T02:09:52.671428" level="INFO">${random_number1} = 8</msg>
+<arg>${random_number1}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.670424" elapsed="0.001004"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-09-09T02:09:52.671428" level="INFO">${random_number2} = 23</msg>
+<arg>${random_number2}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.671428" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-09-09T02:09:52.671428" level="INFO">${random_number3} = 437</msg>
+<arg>${random_number3}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.671428" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-09-09T02:09:52.672428" level="INFO">${random_number4} = 4896</msg>
+<arg>${random_number4}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.672428" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${random_number1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.672428" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${random_number2}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.673427" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${random_number3}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.673427" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${random_number4}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.674428" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-09T02:09:52.674428" level="INFO">8</msg>
+<arg>${random_number1}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.674428" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-09T02:09:52.675429" level="INFO">23</msg>
+<arg>${random_number2}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.674428" elapsed="0.001001"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-09T02:09:52.675429" level="INFO">437</msg>
+<arg>${random_number3}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.675429" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-09T02:09:52.675429" level="INFO">4896</msg>
+<arg>${random_number4}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.675429" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-09-09T02:09:52.668403" elapsed="0.007026"/>
+</kw>
+<kw name="Test Get Formatted Dates" owner="dashboard_maps">
+<kw name="Formatted Past Date" owner="logic">
+<msg time="2024-09-09T02:09:52.676428" level="INFO">${past_date} = 06/11/2024 02:09:52.676428</msg>
+<var>${past_date}</var>
+<status status="PASS" start="2024-09-09T02:09:52.676428" elapsed="0.000000"/>
+</kw>
+<kw name="Formatted Current Date" owner="logic">
+<msg time="2024-09-09T02:09:52.677429" level="INFO">${formatted_current_date} = 09/09/2024 02:09 AM</msg>
+<msg time="2024-09-09T02:09:52.677429" level="INFO">${formatted_current_date_2} = 09/09/2024 02:09:52.677429 AM</msg>
+<msg time="2024-09-09T02:09:52.677429" level="INFO">${formatted_current_date_3} = 09/09/2024 02:09:52.677429</msg>
+<var>${formatted_current_date}</var>
+<var>${formatted_current_date_2}</var>
+<var>${formatted_current_date_3}</var>
+<status status="PASS" start="2024-09-09T02:09:52.677429" elapsed="0.000000"/>
+</kw>
+<kw name="Formatted Future Date" owner="logic">
+<msg time="2024-09-09T02:09:52.677429" level="INFO">${future_date} = 12/08/2024 02:09 AM</msg>
+<var>${future_date}</var>
+<status status="PASS" start="2024-09-09T02:09:52.677429" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Generated Formatted Time Past: ${past_date}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.677429" elapsed="0.001000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Generated Formatted Time Current A: ${formatted_current_date}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.678429" elapsed="0.000507"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Generated Formatted Time Current B: ${formatted_current_date_2}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.678936" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Generated Formatted Time Current C: ${formatted_current_date_3}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.678936" elapsed="0.001005"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Generated Formatted Time Future: ${future_date}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.679941" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-09T02:09:52.680939" level="INFO">Generated Formatted Time Past: 06/11/2024 02:09:52.676428</msg>
+<arg>Generated Formatted Time Past: ${past_date}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.679941" elapsed="0.000998"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-09T02:09:52.680939" level="INFO">Generated Formatted Time Current A: 09/09/2024 02:09 AM</msg>
+<arg>Generated Formatted Time Current A: ${formatted_current_date}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.680939" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-09T02:09:52.680939" level="INFO">Generated Formatted Time Current B: 09/09/2024 02:09:52.677429 AM</msg>
+<arg>Generated Formatted Time Current B: ${formatted_current_date_2}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.680939" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-09T02:09:52.681940" level="INFO">Generated Formatted Time Current C: 09/09/2024 02:09:52.677429</msg>
+<arg>Generated Formatted Time Current C: ${formatted_current_date_3}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.681940" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-09T02:09:52.681940" level="INFO">Generated Formatted Time Future: 12/08/2024 02:09 AM</msg>
+<arg>Generated Formatted Time Future: ${future_date}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.681940" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-09-09T02:09:52.681940" level="INFO">${past_date} = 06/11/2024 02:09:52.676428</msg>
+<arg>${past_date}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.681940" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-09-09T02:09:52.682939" level="INFO">${formatted_current_date} = 09/09/2024 02:09 AM</msg>
+<arg>${formatted_current_date}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.682939" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-09-09T02:09:52.682939" level="INFO">${formatted_current_date_2} = 09/09/2024 02:09:52.677429 AM</msg>
+<arg>${formatted_current_date_2}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.682939" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-09-09T02:09:52.683939" level="INFO">${formatted_current_date_3} = 09/09/2024 02:09:52.677429</msg>
+<arg>${formatted_current_date_3}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.683939" elapsed="0.000000"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2024-09-09T02:09:52.683939" level="INFO">${future_date} = 12/08/2024 02:09 AM</msg>
+<arg>${future_date}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.683939" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-09-09T02:09:52.676428" elapsed="0.008511"/>
+</kw>
+<kw name="Search on map" owner="dashboard_maps">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${field input-search}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.685942" elapsed="0.012514"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:09:52.699643" level="INFO">Typing text 'Ang Mo Kio CC' into text field 'xpath=//div[@id="search-input-wrapper"]/input[@id="search_property"]'.</msg>
+<arg>${field input-search}</arg>
+<arg>${community - 1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.698456" elapsed="0.095613"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:09:54.346572" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<arg>${search drop down}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:52.794069" elapsed="1.766654"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:09:54.560723" level="INFO">Clicking element 'xpath=//*[@id="autocom-box"]/li[1]'.</msg>
+<arg>${search drop down}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:09:54.560723" elapsed="0.062137"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="markerInfoboxwrapper"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:54.622860" elapsed="0.016619"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="markerInfoPos"]/img[@alt="Share"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:54.639479" elapsed="0.892421"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:09:55.531900" level="INFO">Clicking element 'xpath=//div[@id="markerInfoPos"]/img[@alt="Share"]'.</msg>
+<arg>xpath=//div[@id="markerInfoPos"]/img[@alt="Share"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:09:55.531900" elapsed="0.037544"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="copyNotification2"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:55.569444" elapsed="0.020034"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="copyNotification2"]</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:55.589478" elapsed="1.887005"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:09:57.477483" level="INFO">Clicking element 'xpath=//div[@id="markerInfoHeader"]/img[@id="markerInfoClose"]'.</msg>
+<arg>xpath=//div[@id="markerInfoHeader"]/img[@id="markerInfoClose"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:09:57.477483" elapsed="0.034266"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="markerInfoboxwrapper"]</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:57.511749" elapsed="0.017538"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${field input-search}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:57.529287" elapsed="0.047825"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:09:57.578615" level="INFO">Typing text 'Bedok CC' into text field 'xpath=//div[@id="search-input-wrapper"]/input[@id="search_property"]'.</msg>
+<arg>${field input-search}</arg>
+<arg>${community - 2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:09:57.577112" elapsed="0.104901"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${search drop down}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:57.683013" elapsed="0.636719"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:09:58.319732" level="INFO">Clicking element 'xpath=//*[@id="autocom-box"]/li[1]'.</msg>
+<arg>${search drop down}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:09:58.319732" elapsed="0.043099"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="markerInfoboxwrapper"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:58.363831" elapsed="0.013024"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="markerInfoPos"]/img[@alt="Share"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:58.376855" elapsed="0.887448"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:09:59.265304" level="INFO">Clicking element 'xpath=//div[@id="markerInfoPos"]/img[@alt="Share"]'.</msg>
+<arg>xpath=//div[@id="markerInfoPos"]/img[@alt="Share"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:09:59.265304" elapsed="0.038129"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="copyNotification2"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:59.303433" elapsed="0.022503"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="copyNotification2"]</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:09:59.326936" elapsed="1.836119"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:10:01.164055" level="INFO">Clicking element 'xpath=//div[@id="markerInfoHeader"]/img[@id="markerInfoClose"]'.</msg>
+<arg>xpath=//div[@id="markerInfoHeader"]/img[@id="markerInfoClose"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:10:01.163055" elapsed="0.040722"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="markerInfoboxwrapper"]</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:10:01.204777" elapsed="0.015984"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${field input-search}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:10:01.220761" elapsed="0.015000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:10:01.236761" level="INFO">Typing text 'Bishan CC' into text field 'xpath=//div[@id="search-input-wrapper"]/input[@id="search_property"]'.</msg>
+<arg>${field input-search}</arg>
+<arg>${community - 3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:10:01.235761" elapsed="0.092704"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${search drop down}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:10:01.329478" elapsed="0.013564"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:10:01.343042" level="INFO">Clicking element 'xpath=//*[@id="autocom-box"]/li[1]'.</msg>
+<arg>${search drop down}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:10:01.343042" elapsed="0.039863"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="markerInfoboxwrapper"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:10:01.382905" elapsed="0.016524"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="markerInfoPos"]/img[@alt="Share"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:10:01.400431" elapsed="0.666483"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:10:02.068418" level="INFO">Clicking element 'xpath=//div[@id="markerInfoPos"]/img[@alt="Share"]'.</msg>
+<arg>xpath=//div[@id="markerInfoPos"]/img[@alt="Share"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:10:02.068418" elapsed="0.048336"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="copyNotification2"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:10:02.116754" elapsed="0.013791"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="copyNotification2"]</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:10:02.130545" elapsed="1.793394"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:10:03.924939" level="INFO">Clicking element 'xpath=//div[@id="markerInfoHeader"]/img[@id="markerInfoClose"]'.</msg>
+<arg>xpath=//div[@id="markerInfoHeader"]/img[@id="markerInfoClose"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:10:03.923939" elapsed="0.027532"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="markerInfoboxwrapper"]</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:10:03.951471" elapsed="0.012990"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${field input-search}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:10:03.964461" elapsed="0.012103"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:10:03.977565" level="INFO">Typing text 'Bukit Batok CC' into text field 'xpath=//div[@id="search-input-wrapper"]/input[@id="search_property"]'.</msg>
+<arg>${field input-search}</arg>
+<arg>${community - 4}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:10:03.977565" elapsed="0.126140"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${search drop down}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:10:04.104705" elapsed="0.044782"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:10:04.149487" level="INFO">Clicking element 'xpath=//*[@id="autocom-box"]/li[1]'.</msg>
+<arg>${search drop down}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:10:04.149487" elapsed="0.044348"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="markerInfoboxwrapper"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:10:04.194835" elapsed="0.016582"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="markerInfoPos"]/img[@alt="Share"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:10:04.212419" elapsed="0.012083"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:10:04.224502" level="INFO">Clicking element 'xpath=//div[@id="markerInfoPos"]/img[@alt="Share"]'.</msg>
+<arg>xpath=//div[@id="markerInfoPos"]/img[@alt="Share"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:10:04.224502" elapsed="0.028538"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="copyNotification2"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:10:04.253040" elapsed="0.016037"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="copyNotification2"]</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:10:04.269077" elapsed="1.719683"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:10:05.988760" level="INFO">Clicking element 'xpath=//div[@id="markerInfoHeader"]/img[@id="markerInfoClose"]'.</msg>
+<arg>xpath=//div[@id="markerInfoHeader"]/img[@id="markerInfoClose"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:10:05.988760" elapsed="0.024614"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="markerInfoboxwrapper"]</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:10:06.013374" elapsed="0.016881"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${field input-search}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:10:06.030255" elapsed="0.013548"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:10:06.043803" level="INFO">Typing text 'Bukit Merah CC' into text field 'xpath=//div[@id="search-input-wrapper"]/input[@id="search_property"]'.</msg>
+<arg>${field input-search}</arg>
+<arg>${community - 5}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:10:06.043803" elapsed="0.093205"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${search drop down}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:10:06.138512" elapsed="0.014398"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:10:06.152910" level="INFO">Clicking element 'xpath=//*[@id="autocom-box"]/li[1]'.</msg>
+<arg>${search drop down}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:10:06.152910" elapsed="0.037507"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="markerInfoboxwrapper"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:10:06.191420" elapsed="0.015912"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="markerInfoPos"]/img[@alt="Share"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:10:06.207332" elapsed="0.876968"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:10:07.084300" level="INFO">Clicking element 'xpath=//div[@id="markerInfoPos"]/img[@alt="Share"]'.</msg>
+<arg>xpath=//div[@id="markerInfoPos"]/img[@alt="Share"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:10:07.084300" elapsed="0.035196"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="copyNotification2"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-09T02:10:07.120773" elapsed="0.018038"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="copyNotification2"]</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:10:07.138811" elapsed="1.762073"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-09T02:10:08.900884" level="INFO">Clicking element 'xpath=//div[@id="markerInfoHeader"]/img[@id="markerInfoClose"]'.</msg>
+<arg>xpath=//div[@id="markerInfoHeader"]/img[@id="markerInfoClose"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-09T02:10:08.900884" elapsed="0.034751"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@id="markerInfoboxwrapper"]</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-09-09T02:10:08.935635" elapsed="0.019319"/>
+</kw>
+<tag>Search on map</tag>
+<doc>Search on map</doc>
+<status status="PASS" start="2024-09-09T02:09:52.684939" elapsed="16.270015"/>
+</kw>
+<doc>Perform Check necessary element</doc>
+<tag>Perform Check necessary element</tag>
+<status status="PASS" start="2024-09-09T02:09:52.668403" elapsed="16.287550"/>
+</test>
+<status status="PASS" start="2024-09-09T02:09:46.467843" elapsed="22.489112"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Open Browser (Chrome)[Incognito]</stat>
+<stat pass="2" fail="0" skip="0">Perform Check necessary element</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Suite Test-Dashboard">Suite Test-Dashboard</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
