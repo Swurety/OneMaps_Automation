@@ -1,8 +1,7 @@
 README
 
-## Tujuan Program
-
-Program otomasi ini dirancang untuk memfasilitasi pengujian dashboard OneMaps dengan menggunakan Robot Framework. Program ini mengatasi masalah pengujian manual dengan menyediakan automasi yang efisien untuk mendapatkan data dari API GET dan melakukan uji fungsional pada elemen web di dashboard OneMaps.
+## Program Purpose
+This automation program is designed to facilitate testing of the OneMaps dashboard using Robot Framework. It solves the problem of manual testing by providing efficient automation to retrieve data from a GET API and conduct functional tests on web elements in the OneMaps dashboard.
 
 ## Fitur Utama
 
