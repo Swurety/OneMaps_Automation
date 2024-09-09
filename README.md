@@ -3,23 +3,21 @@ README
 ## Program Purpose
 This automation program is designed to facilitate testing of the OneMaps dashboard using Robot Framework. It solves the problem of manual testing by providing efficient automation to retrieve data from a GET API and conduct functional tests on web elements in the OneMaps dashboard.
 
-## Fitur Utama
+## Key Features
+- Retrieve Data from GET API: Simplifies the testing process by fetching data from a GET API for use in test cases.
+- OneMaps Dashboard Functional Testing: Ensures that core elements of the OneMaps dashboard function as expected.
+- Integration with Other Tools: Utilizes Robot Framework alongside libraries and extensions such as robotframework-requests, robotframework-seleniumlibrary, and robotframework-jsonlibrary.
 
-- Mendapatkan Data dari GET API: Mempermudah proses pengujian dengan mengambil data dari API GET untuk digunakan dalam tes.
-- Uji Fungsional Dashboard OneMaps: Memastikan elemen dasar pada dashboard OneMaps berfungsi sebagaimana mestinya.
-- Integrasi dengan Alat Lain: Menggunakan Robot Framework bersama dengan pustaka dan ekstensi seperti `robotframework-requests`, `robotframework-seleniumlibrary`, dan `robotframework-jsonlibrary`.
-
-## Prasyarat
-
-1. GET API: Mengakses API untuk data pengujian.
-2. Testing Dashboard OneMaps: Memastikan fungsi dasar ditampilkan dengan benar di website.
-3. Memastikan Button Dasar: Memastikan elemen tombol dasar tampil di website.
-4. Uji Fungsional Web OneMaps: Melakukan pengujian fungsional pada website OneMaps.
+## Prerequisites
+1. GET API Access: Required for fetching test data.
+2. OneMaps Dashboard Testing: Ensures that the core functionality is displayed correctly on the website.
+3. Verify Core Buttons: Ensures basic buttons are displayed on the website.
+4. OneMaps Web Functional Testing: Conducts functional tests on the OneMaps website.
 
 ## Instalasi
-1. Python: Unduh dan instal dari [Python.org](https://www.python.org/downloads/).
-2. Anaconda: Unduh dan instal dari [Anaconda.com](https://www.anaconda.com/download).
-3. Install Dependencies: Jalankan perintah berikut di Command Prompt setelah Python terinstal:
+1. Python: Download and install from [Python.org](https://www.python.org/downloads/).
+2. Anaconda: Download and install from [Anaconda.com](https://www.anaconda.com/download).
+3. Install Dependencies: After installing Python, run the following commands in the Command Prompt:
    ```bash
    pip install collection
    pip install jsons
@@ -32,32 +30,32 @@ This automation program is designed to facilitate testing of the OneMaps dashboa
    pip install robotframework-jsonlibrary
    pip install selenium
 4. Browser driver
-5. Extension VSCode: Install ekstensi Python dan Robot Framework Support dari marketplace VSCode.
+5. VSCode Extensions: Install Python and Robot Framework Support extensions from the VSCode marketplace.
 
-## Penggunaan
-1. Python: Download dari Python.org.
-2. Anaconda: Download dari Anaconda.com.
-3. Pip Install: Jalankan perintah pip install di Command Prompt setelah Python terinstal.
-4. VSCode Extensions: Install ekstensi Python dan Robot Framework Support langsung melalui VSCode.
+## Usage
+1. Python: Download from Python.org.
+2. Pip Install: Jalankan perintah pip install di Command Prompt setelah Python terinstal.
+3. VSCode Extensions: Install Python and Robot Framework Support extensions directly from within VSCode.
 
-## Menjalankan Tes
-1. Pastikan semua dependensi dan ekstensi telah terinstal.
-2. Jalankan skrip Robot Framework melalui Command Prompt atau terminal di VSCode dengan perintah:
+## Running Tests
+1. Ensure all dependencies and extensions are installed.
+2. Run the Robot Framework script via Command Prompt or the VSCode terminal using the following command:
 	robot [path script].robot
+3. View the test results in the generated report after execution.
 
-## Contoh Kasus Penggunaan
-Contoh penggunaan melibatkan pembuatan otomatisasi langsung di editor teks dengan Robot Framework, untuk menguji fungsionalitas pada dashboard OneMaps.
+## Example Use Case
+A typical use case involves creating automation directly in a text editor using Robot Framework to test functionality within the OneMaps dashboard.
 
-## Penanganan Kesalahan
-1. Kesalahan Instalasi: Pastikan semua dependensi terinstal dengan benar dan periksa versi yang kompatibel.
-2. Masalah Pengujian: Periksa skrip Robot Framework untuk kesalahan sintaks atau konfigurasi yang tidak tepat.
-3. API Error: Verifikasi endpoint API dan parameter yang digunakan dalam pengujian.
+## Error Handling
+1. Installation Errors: Ensure all dependencies are correctly installed, and check for compatible versions.
+2. Test Issues: Verify the Robot Framework script for syntax errors or incorrect configurations.
+3. API Errors: Check the API endpoint and the parameters used in testing.
 
-## Kontribusi
-Jika Anda ingin berkontribusi pada proyek ini, silakan fork repositori ini dan kirim pull request dengan perubahan atau perbaikan Anda. Pastikan untuk mengikuti pedoman kontribusi yang ada.
+## Contribution
+If you wish to contribute to this project, feel free to fork this repository and submit a pull request with your changes or improvements. Please follow the existing contribution guidelines.
 
-## Dokumentasi Tambahan
-Untuk informasi lebih lanjut tentang Robot Framework, kunjungi Robot Framework Documentation. Untuk panduan menggunakan pustaka terkait, referensikan dokumentasi masing-masing pustaka seperti robotframework-requests dan robotframework-seleniumlibrary.
+## Additional Documentation
+For further information about Robot Framework, visit the Robot Framework Documentation. For usage guidelines of related libraries, refer to their respective documentation such as robotframework-requests and robotframework-seleniumlibrary..
 
-## Lisensi
-Program ini dilisensikan di bawah Lisensi MIT. Anda bebas untuk menggunakan, memodifikasi, dan mendistribusikan perangkat lunak ini dengan syarat yang tercantum dalam lisensi.
+## License
+This program is licensed under the MIT License. You are free to use, modify, and distribute this software under the terms outlined in the license.
